@@ -35,7 +35,7 @@ const meshSR = new THREE.Mesh( geometryS, materialStefanRain );
 scene.add( meshD );
 scene.add(meshSL);
 scene.add(meshSR);
-meshD.position.z = -0.3;
+meshD.position.z = -1;
 meshSR.position.set(-0.9,-0.2,-0.2);
 meshSL.position.set(0.9,-0.2,-0.2);
 
@@ -53,13 +53,12 @@ function animate( time ) {
 	meshD.position.z = Math.sin(time/1000)/3;
 
 	meshSL.rotation.y = time / -1000;
-	meshSL.position.y = Math.sin(time/1000)/1.5;
-	meshSL.position.x = Math.cos(time/1000)/1.8;
+	meshSL.position.y = Math.sin(time/1000)/1.2;
+	meshSL.position.x = Math.cos(time/1000)/1.5;
 
 	meshSR.rotation.y = time / -1000;
-	meshSR.position.y = Math.cos(time/1000)/1.5;
-	meshSR.position.x = Math.sin(time/1000)/1.8;
+	meshSR.position.y = Math.cos(time/1000)/1.2;
+	meshSR.position.x = Math.sin(time/1000)/1.5;
 
 	renderer.render( scene, camera );
-
 }
